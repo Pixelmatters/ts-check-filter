@@ -1,0 +1,26 @@
+{
+  "name": "ts-check-filter",
+  "version": "1.0.0",
+  "description": "Filter TypeScript errors based on the given rules.",
+  "main": "index.js",
+  "scripts": {
+    "dev": "tsc --watch",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "typescript",
+    "errors",
+    "ci",
+    "tool"
+  ],
+  "author": "Gil Mendes <gil00mendes@gmail.com>",
+  "license": "MIT",
+  "bin": {
+    "ts-check-filter": "./bin/entrypoint"
+  },
+  "devDependencies": {
+    "@types/node": "^16.10.2",
+    "nanocolors": "^0.2.12",
+    "typescript": "^4.4.3"
+  }
+}
