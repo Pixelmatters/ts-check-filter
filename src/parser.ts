@@ -11,6 +11,8 @@ import { arrayReplacePos } from "./utils";
  */
 const REGEX_ERROR_LINE = /^(.*)\(\d+,\d+\): error (TS\d{4,}):.*$/;
 
+export const REGEX_ERROR_PRINT = /^(.*)(\(\d+,\d+\)): error (TS\d{4,})(.*)$/m;
+
 /**
  * Interface to temporary hold the parsed line.
  */
@@ -57,7 +59,7 @@ export function parseInput(data: Array<string>): Array<TSError> {
         return [];
       }
 
-      const newErrorStr = `${errors[errors.length - 1].rawCodeLine}${line}`;
+      const newErrorStr = `${errors[errors.length - 1].rawCodeLine}\n${line}`;
       const updatedEntry: TSError = {
         ...errors[errors.length - 1],
         rawCodeLine: newErrorStr,

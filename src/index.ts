@@ -1,23 +1,28 @@
-import { red, green } from "nanocolors";
-
+import {
+  processConsoleArguments,
+  readConfigurations,
+  reportErrors,
+} from "../cli";
 import { groupErrors } from "./errors";
 import { getProgramInput } from "./io";
 import { parseInput } from "./parser";
 
-(async function () {
+/**
+ * Main function.
+ *
+ * Everything related with the interface is implemented here.
+ */
+(async function main() {
+  const argv = await processConsoleArguments();
+
   const normalizedData = await getProgramInput().then(parseInput);
 
-  const ignoredFiles = [/src\/__generated__\/.*/];
-  const groupedErrors = groupErrors(normalizedData, ignoredFiles);
+  const configs = readConfigurations();
 
-  // report number of errors found
-  console.log(`${red(normalizedData.length)} errors found`);
-  console.log(`${green(groupedErrors.ignoredErrors.length)} errors ignored`);
+  const groupedErrors = groupErrors(normalizedData, configs.pathFilterRules);
 
-  // report errors
-  groupedErrors.validErrors.forEach((entry) =>
-    console.log(`\n${entry.rawCodeLine}`)
-  );
+  // only report the number of errors and the errors itself when the silent mode isn't enabled
+  !argv.silent && reportErrors(groupedErrors);
 
   // when still existing errors after the clean action exit the program with an error. This is useful for CI pipelines
   // and to use bash/scripts.
