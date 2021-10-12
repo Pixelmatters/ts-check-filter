@@ -3,6 +3,7 @@ node_modules/
 
 # generated
 dist/
+coverage/
 
 # OS
 .DS_STORE
