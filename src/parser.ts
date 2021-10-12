@@ -44,29 +44,26 @@ const constructParseEntry = (matchParts: RegExpMatchArray) =>
  * @returns
  */
 export function parseInput(data: Array<string>): Array<TSError> {
-  return data.reduce<Array<TSError>>(
-    (errors: Array<TSError>, line: string, curIndex: number) => {
-      const errorParts = matchErrorMsg(line);
+  return data.reduce<Array<TSError>>((errors: Array<TSError>, line: string) => {
+    const errorParts = matchErrorMsg(line);
 
-      const newEntry = !!errorParts ? constructParseEntry(errorParts) : null;
+    const newEntry = !!errorParts ? constructParseEntry(errorParts) : null;
 
-      if (newEntry) {
-        return [...errors, newEntry];
-      }
+    if (newEntry) {
+      return [...errors, newEntry];
+    }
 
-      // if the error array is empty return an empty array
-      if (errors.length === 0) {
-        return [];
-      }
+    // if the error array is empty return an empty array
+    if (errors.length === 0) {
+      return [];
+    }
 
-      const newErrorStr = `${errors[errors.length - 1].rawCodeLine}\n${line}`;
-      const updatedEntry: TSError = {
-        ...errors[errors.length - 1],
-        rawCodeLine: newErrorStr,
-      };
+    const newErrorStr = `${errors[errors.length - 1].rawCodeLine}\n${line}`;
+    const updatedEntry: TSError = {
+      ...errors[errors.length - 1],
+      rawCodeLine: newErrorStr,
+    };
 
-      return arrayReplacePos(errors, errors.length - 1, updatedEntry);
-    },
-    []
-  );
+    return arrayReplacePos(errors, errors.length - 1, updatedEntry);
+  }, []);
 }
