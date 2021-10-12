@@ -65,3 +65,7 @@ To test implementation and check if the code follows the right guidelines, pleas
 ```bash
 pnpm test
 ```
+
+## :memo: License
+
+Licensed under the [BSD-2 License](./LICENSE).
