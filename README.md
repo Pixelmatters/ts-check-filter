@@ -42,6 +42,16 @@ To use the filter pipe the results into `ts-check-filter`:
 tsc --noEmit | npx ts-check-filter
 ```
 
+To define the paths to be ignored create a new `ts-check-filter.js` file on the project root:
+
+```js
+module.exports = {
+  pathFilterRules: [/src\/__generated__\/.*/],
+}
+```
+
+The `pathFilterRules` is an array of `string`s or `RegExp`. In the example above, we use a regular expression to ignore all the files under the `__generated__` directory.
+
 > **Note:** If you don't pep anything into the filter it will be waiting for ever for an input.
 
 ### Options
