@@ -7,7 +7,7 @@
 </h3>
 
 <p align="center">
-This is useful when using code-generation tools or while migrating to a strict `tsconfig.json`, allowing a smother and incremental transition.
+This is useful when using code-generation tools or while migrating to a strict <code>tsconfig.json</code>, allowing a smother and incremental transition.
 </p>
 
 <p align="center">
