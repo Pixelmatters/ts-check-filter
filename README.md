@@ -66,6 +66,12 @@ To test implementation and check if the code follows the right guidelines, pleas
 pnpm test
 ```
 
-## :memo: License
+## 🤝 How to Contribute
+
+Whether you're helping us fix bugs, improve the docs, or spread the word, thank you! 💪 🧡
+
+Check out our [**Contributing Guide**](https://github.com/Pixelmatters/tes-check-filter/blob/main/CONTRIBUTING.md) for ideas on contributing and setup steps.
+
+## 📝 License
 
 Licensed under the [BSD-2 License](./LICENSE).
