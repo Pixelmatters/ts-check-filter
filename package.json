@@ -1,8 +1,11 @@
 {
-  "name": "ts-check-filter",
+  "name": "@pixelmatters/ts-check-filter",
   "version": "1.0.0",
   "description": "Filter TypeScript errors based on the given rules.",
-  "main": "index.js",
+  "main": "src/index.ts",
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "dev": "tsc --watch",
     "test": "npm-run-all test:*",
@@ -17,7 +20,7 @@
     "tool"
   ],
   "author": "Gil Mendes <gil00mendes@gmail.com>",
-  "license": "MIT",
+  "license": "BSD-2-Clause",
   "bin": {
     "ts-check-filter": "./bin/entrypoint"
   },

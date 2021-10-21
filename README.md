@@ -12,7 +12,7 @@ This is useful when using code-generation tools or while migrating to a strict <
 
 <p align="center">
   <a href="https://github.com/Pixelmatters/ts-check-filter/blob/main/LICENSE">
-    <img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="ts-check-filter is released under the MIT license." />
+    <img src="https://img.shields.io/npm/l/@pixelmatters/ts-check-filter" alt="ts-check-filter license." />
   </a>
   <a href="https://www.npmjs.com/package/@pixelmatters/ts-check-filter">
     <img src="https://img.shields.io/npm/v/@pixelmatters/ts-check-filter.svg" alt="Current npm package version." />
