@@ -1,3 +1,10 @@
+## [1.0.1](https://github.com/Pixelmatters/ts-check-filter/compare/v1.0.0...v1.0.1) (2021-10-22)
+
+
+### Bug Fixes
+
+* release workflow ([62fa646](https://github.com/Pixelmatters/ts-check-filter/commit/62fa6463ee6cb41a554ccd8ce3eedda8ee2fd37c))
+
 # 1.0.0 (2021-10-21)
 
 
