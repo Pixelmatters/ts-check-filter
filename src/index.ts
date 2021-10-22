@@ -2,7 +2,7 @@ import {
   processConsoleArguments,
   readConfigurations,
   reportErrors,
-} from "../cli";
+} from "./cli";
 import { groupErrors } from "./errors";
 import { getProgramInput } from "./io";
 import { parseInput } from "./parser";

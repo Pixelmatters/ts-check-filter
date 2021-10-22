@@ -1,9 +1,10 @@
 import { red, green, blue, yellow, gray } from "nanocolors";
 import { join } from "path";
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-ignore
 import Sywac from "sywac";
-import { GroupedErrors } from "./src/errors";
-import { REGEX_ERROR_PRINT } from "./src/parser";
+import { GroupedErrors } from "./errors";
+import { REGEX_ERROR_PRINT } from "./parser";
 
 interface Configs {
   pathFilterRules: Array<string | RegExp>;

@@ -10,3 +10,4 @@ node_modules
 .gitignore
 CONTRIBUTING.md
 *.test.ts
+coverage
