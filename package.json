@@ -1,6 +1,6 @@
 {
   "name": "@pixelmatters/ts-check-filter",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Filter TypeScript errors based on the given rules.",
   "main": "src/index.ts",
   "publishConfig": {
