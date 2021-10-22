@@ -36,6 +36,9 @@ jobs:
       - name: Run tests
         run: pnpm run test
 
+      - name: Build tool
+        run: pnpm build
+
       - name: Semantic Release and Publish to NPM
         uses: cycjimmy/semantic-release-action@v2
         id: semantic

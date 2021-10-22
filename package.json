@@ -8,6 +8,7 @@
   },
   "scripts": {
     "dev": "tsc --watch",
+    "build": "tsc",
     "test": "npm-run-all test:*",
     "test:type": "tsc --noEmit",
     "test:lint": "eslint src/",
