@@ -36,6 +36,12 @@ The `exclude` option in `tsconfig.json` makes tsc not directly check the file. U
 
 ## Usage
 
+To install:
+
+```bash
+npm i @pixelmatters/ts-check-filter
+```
+
 To use the filter pipe the results into `ts-check-filter`:
 
 ```bash
